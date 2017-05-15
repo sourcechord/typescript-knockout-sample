@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Selectable Table Sample</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+    <script src="node_modules/knockout/build/output/knockout-latest.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h2>Knockout.jsで選択可能なテーブルのサンプル</h2>
+
+    <span>選択項目：</span>
+    <span data-bind="text: selected().name"></span>
+    <br />
+
+    <table class="selectableTable">
+        <thead>
+            <tr>
+                <th>名前</th>
+                <th>年齢</th>
+                <th>メモ</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: list">
+            <tr data-bind="click: $parent.selected, attr: {'selected': $parent.selected() == $data}">
+                <td data-bind="text: name"></td>
+                <td data-bind="text: age"></td>
+                <td data-bind="text: memo"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

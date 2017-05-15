@@ -1,0 +1,45 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+span {
+    font-style: italic;
+}
+
+
+.selectableTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .selectableTable th {
+        width: 33%;
+        padding: 4px;
+        text-align: center;
+        vertical-align: top;
+        color: #333;
+        background-color: silver;
+        border: 1px solid #b9b9b9;
+    }
+
+    .selectableTable tr {
+    }
+
+        .selectableTable tr:nth-child(odd) {
+            background: whitesmoke;
+        }
+
+    .selectableTable td {
+        padding: 3px;
+        border: 1px solid darkgray;
+    }
+
+    .selectableTable tbody tr:hover {
+        background: #E5E5E5;
+        cursor: pointer;
+    }
+
+    .selectableTable tr[selected] {
+        background: #E0E8FF;
+        font-weight: bold;
+    }
